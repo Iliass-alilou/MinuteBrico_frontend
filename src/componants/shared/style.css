@@ -1,0 +1,82 @@
+a{
+    text-decoration: none;
+}
+.navbar{
+    display:flex;
+    justify-content: space-around;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+}
+.navbar>a>.logo{
+    width:94px;
+    height:100px;
+}
+.navbar>.center{
+    list-style:none;
+    display:flex;
+    align-items: center;
+    
+}
+.navbar>.center>a>li{
+    font-family: Arial;
+    font-size:20px;
+    color:#8C8C8C;
+    margin-right: 40px;
+}
+.navbar>.center>a>li:hover{
+    color: black;
+}
+
+.navbar>.auth{
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+}
+.navbar>.auth>a>li{
+    font-size: 20px;
+    font-family: Arial;
+    text-transform:capitalize ;
+    width:163px;
+    height:41px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: 1s;
+    transform-origin: all;
+    border: 1px solid transparent;
+}
+.navbar>.auth>a>.seconnect,.navbar>.auth>a>.signup:hover{
+    margin-right: 10px;
+    background: #D1653E;
+    border: 1px solid #D1653E;
+    color: white;
+}
+.navbar>.auth>a>.signup{
+    margin-right: 10px;
+    background: white;
+    color: black;
+    border: 1px solid transparent;
+}
+
+.InputComp{
+    
+}
+
+.InputComp>.title{
+    font-family:Arial;
+    font-size : 13px;
+    font-weight: 600;
+}
+.InputComp>.Input{
+    height:35px;
+    width:100%;
+    margin-top: -10px;
+    border-radius: 10px;
+}

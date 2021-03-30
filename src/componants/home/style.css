@@ -1,0 +1,51 @@
+.Main_Home{
+
+}
+
+.Main_Home>.banner{
+    height: 70vh;
+    width: 100%;
+    position:relative;
+    padding-top:300px;
+}
+.Main_Home>.banner>.imgBack{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.Main_Home>.banner>.BannerFront{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Main_Home>.banner>.BannerFront>.DevBrico,.Main_Home>.banner>.BannerFront>.TrouvBrico{
+    margin-right: 40px;
+    margin-top: 3vh;
+    height: 50px;
+    width:300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    font-size: 23px;
+    text-shadow: 1px 1px 3px black;
+    border: 4px solid #D1653E;
+}
+
+.Main_Home>.banner>.BannerFront>.DevBrico{
+    background : #D1653E;
+}
+.Main_Home>.banner>.BannerFront>.TrouvBrico{
+    background : rgba(228, 221, 221, 0.4);
+    transition: 1s;
+    transform-origin:all
+}
+.Main_Home>.banner>.BannerFront>.TrouvBrico:hover{
+    background : #D1653E;
+}
