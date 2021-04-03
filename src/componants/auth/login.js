@@ -8,7 +8,7 @@ export default class Login extends Component {
   verify = ()=>{
     const email = document.getElementById("Idemail")
     const password = document.getElementById("Idpassword")
-    Axios.post("http://192.168.43.216:8080/login",{
+    Axios.post("http://localhost:8080/login",{
       username:email.value,
       password:password.value
     })

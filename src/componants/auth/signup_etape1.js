@@ -17,7 +17,7 @@ export default class SignUpEtape1 extends Component {
     var email = document.getElementById("IdEmail")
     var password = document.getElementById("pass1")
     if(pass1.value===pass2.value){
-      Axios.post("http://192.168.43.216:8080/registration",{
+      Axios.post("http://localhost:8080/registration",{
         firstName :"iliass",
         lastName : "alilou",
         email : email.value,

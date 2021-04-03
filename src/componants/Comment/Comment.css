@@ -1,0 +1,102 @@
+.comment-container {
+    background-color: #f3f3f3;
+    padding: 4rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .comment-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    margin-bottom: 24px;
+    padding: 24px;
+    color: #D1653E;
+  }
+  
+  .comment-title > p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .comment-title-heading {
+    margin-bottom: 24px;
+    font-size: 30px;
+  }
+  
+  .comment-title-text {
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+  
+  .comment-input {
+    padding: 8px 20px;
+    border-radius: 2px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border: 1px solid #fff;
+  }
+  
+  .comment-links {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .comment-link-wrapper {
+    display: flex;
+  }
+  
+  .comment-link-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: center;
+    width: 180px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  
+  .comment-link-items h2 {
+    margin-bottom: 16px;
+  }
+  
+  .comment-link-items > h2 {
+    color: #D1653E;
+    align-items: center;
+  }
+  .text-center {
+    text-align: center !important; }
+    
+  .comment-link-items a {
+    color: #D1653E;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+  }
+  
+  .comment-link-items a:hover {
+    color: #D1653E;
+    transition: 0.3s ease-out;
+  }
+  
+  .comment-email-form h2 {
+    margin-bottom: 2rem;
+  }
+  
+  .comment-input::placeholder {
+    color: #b1b1b1;
+  }
+  
+  
+  
