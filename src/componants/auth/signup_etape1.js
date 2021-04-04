@@ -3,7 +3,7 @@ import InputComp from "../shared/inputComp"
 import {Link} from "react-router-dom"
 import Axios from 'axios'
 import SweetAlert from 'sweetalert2-react';
-
+import './style.css';
 const url ="http://localhost:3000";
 
 export default class SignUpEtape1 extends Component {

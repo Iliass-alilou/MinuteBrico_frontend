@@ -1,0 +1,26 @@
+#connecter:hover{
+ transform :scale(1.15);
+ 
+}
+#connecter{
+    transform :scale(1);
+    animation: up 1s;
+}
+
+#inscrire:hover{
+    transform :scale(1.15);
+   }
+  
+ #inscrire{
+    transform :scale(1);
+    animation: up 1s;
+       
+   }
+
+   #Search:focus{
+    width:50%
+}
+#Search{
+    border-radius: 100px;
+    width:2%
+}

@@ -1,0 +1,39 @@
+#mission{
+/*background:url("chaouen.jpg") ; 
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;     /*pour si on réduit la fenetre le background reste ou centre*/
+position:absolute;
+min-height:100%;
+min-width:100%;
+background: rgb(255,255,255);
+background: linear-gradient(335deg, rgba(255,255,255,1) 48%, rgba(253,241,214,1) 59%);
+}
+#box{
+    height:300px;
+
+    overflow-y: scroll;
+    overflow-x: none;
+  }
+  #box::-webkit-scrollbar{
+    width:5px;
+    height:105px;
+    opacity:0.5;
+  }
+  #box::-webkit-scrollbar-track{
+    background:white;
+    height:20px;
+  }
+  #box::-webkit-scrollbar-thumb{
+      background:#D1653E;
+      width:10px;
+      height:8px;
+      border-radius:62px;
+  }
+  #box::-webkit-scrollbar-thumb:hover{
+    background:#eb9474;
+  }
+ #head{
+     display:flex;
+     flex-direction: row;
+ }
