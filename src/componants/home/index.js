@@ -14,7 +14,9 @@ export default class Home extends Component {
       <>
       <Nav />
       <Main />
+      <div id="comments">
       <Comment />
+      </div>
       <Cards />
       <Footer />
       </>

@@ -7,7 +7,7 @@ export default class Nav extends Component {
       <div className="navbar">
         <Link to="/"><img alt="..." src="/images/logo.png" className="logo" /></Link>
         <ul className="center">
-          <Link to="/how-it-works" ><li>Comment ça marche</li></Link>
+          <a href="#comments" ><li>Comment ça marche</li></a>
           <Link to="/missions" ><li>Missions</li></Link>
         </ul>
         <ul className="auth">

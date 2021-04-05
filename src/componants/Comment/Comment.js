@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Comment() {
   return (
-    <div className='comment-container'>
+    <div className='comment-container' id="comments">
       <section className='comment-title'>
         <p className='comment-title-heading'>
         Comment ça Marche?
