@@ -4,7 +4,7 @@ import useSWR from 'swr'
 import MissionItems from './CarteMissionComponent';
 import './mission.css';
 const Mission = ()=>{
-  const[categorie,setCategorie]=React.useState(' ');
+  const[categorie,setCategorie]=React.useState('Tout');
   const[radioBoutton,setradioBoutton]=React.useState(2);
 
   function radioHandler(event){
