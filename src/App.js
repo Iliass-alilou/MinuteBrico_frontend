@@ -3,6 +3,7 @@ import Signup from "./componants/auth/signup";
 import Login from "./componants/auth/login";
 import Home from "./componants/home/index";
 import Mission from "./componants/home/MissionsComponent";
+import Empty from "./componants/shared/empty"
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
       </Route>
       <Route exact path="/login" >
         <Login />
+      </Route>
+      <Route exact path="/devenir-brico" >
+        <Empty />
       </Route>
       <Route exact path="/missions" >
         <Mission />

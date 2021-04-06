@@ -9,10 +9,14 @@ import Comment from '../Comment/Comment'
 
 
 export default class Home extends Component {
+
+  componentDidMount(){
+
+  }
   render() {
     return (
       <>
-      <Nav />
+      <Nav isAuth={document.location.href.includes("true")?true:false} data={document.location.href} />
       <Main />
       <div id="comments">
       <Comment />

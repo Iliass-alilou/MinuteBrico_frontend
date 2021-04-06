@@ -22,16 +22,11 @@ export default class Login extends Component {
       password:password.value
      
     })
-
-    
-    
     .then(res=>{
-      console.log("test in");
-      console.log(res.data);
-      if(res.data=="is registred"){
-            document.location.href="http://localhost:3000"
+      console.log(res.data)
+      if(res.data.enabled==true){
+            document.location.href="http://localhost:3000?auth=true&email=__"+res.data.email+"__"
       }else{
-        
         this.setState({ showErr: true })
       }
   
@@ -44,12 +39,16 @@ export default class Login extends Component {
     return (
       <div className="_Signup">
           <div className="SignUpPage">
+
+
           <SweetAlert
               show={this.state.showErr}
               title="Error"
               text="Verifier votre email ou password"
               onConfirm={() => this.setState({ showErr: false })}
             />
+
+
            <Link to="/"> <img alt="..." src="/images/logo.png" className="logo" /></Link>
             <p className="title">Connecter à votre compte</p>
             <form onSubmit={(e)=>{
