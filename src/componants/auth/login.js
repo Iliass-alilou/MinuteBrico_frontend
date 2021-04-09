@@ -11,17 +11,20 @@ export default class Login extends Component {
     showErr : false,
 
   }
+
+
   verify = ()=>{
     const email = document.getElementById("Idemail")
     const password = document.getElementById("Idpassword")
 
     Axios.post("http://localhost:8080/signIn",{
       email:email.value,
-      password:password.value     
+      password:password.value
+     
     })
     .then(res=>{
-      console.log(res.data+" Also :  "+res.data.enabled)
-      if(res.data=="is registred"){
+      console.log(res.data)
+      if(res.data.enabled==true){
             document.location.href="http://localhost:3000?auth=true&email=__"+res.data.email+"__"
       }else{
         this.setState({ showErr: true })
@@ -29,7 +32,7 @@ export default class Login extends Component {
   
   })
   .catch(err =>{
-    console.log(" still have error ",err);
+    console.log("still have error ",err);
   })
   }
   render() {
