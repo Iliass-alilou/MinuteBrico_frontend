@@ -23,8 +23,8 @@ export default class Login extends Component {
      
     })
     .then(res=>{
-      console.log(res.data)
-      if(res.data.enabled==true){
+      console.log(res.data+" Also :  "+res.data.enabled)
+      if(res.data=="is registred"){
             document.location.href="http://localhost:3000?auth=true&email=__"+res.data.email+"__"
       }else{
         this.setState({ showErr: true })

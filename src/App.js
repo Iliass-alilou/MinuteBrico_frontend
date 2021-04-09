@@ -4,7 +4,7 @@ import Login from "./componants/auth/login";
 import Home from "./componants/home/index";
 import Mission from "./componants/home/MissionsComponent";
 import Empty from "./componants/shared/empty"
-
+import Container from "./componants/formmission/container";
 function App() {
   return (
     <Router>
@@ -26,6 +26,9 @@ function App() {
       </Route>
       <Route exact path="/missions" >
         <Mission />
+      </Route>
+      <Route exact path="/createmissions" >
+        <Container />
       </Route>
     </Router>
   );
