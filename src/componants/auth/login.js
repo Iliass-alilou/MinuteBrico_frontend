@@ -1,22 +1,23 @@
-import React, { Component } from 'react';
+import React ,{ Component, useContext } from 'react';
 import "./style.css"
 import InputComp from "../shared/inputComp"
 import {Link} from "react-router-dom"
 import Axios from "axios"
 import SweetAlert from 'sweetalert2-react';
+import Cookies from 'js-cookie';
 
 export default class Login extends Component {
 
+
   state = {
     showErr : false,
-
   }
-
-
   verify = ()=>{
     const email = document.getElementById("Idemail")
     const password = document.getElementById("Idpassword")
 
+
+    
     Axios.post("http://localhost:8080/signIn",{
       email:email.value,
       password:password.value
@@ -25,7 +26,11 @@ export default class Login extends Component {
     .then(res=>{
       console.log(res.data)
       if(res.data.enabled==true){
-            document.location.href="http://localhost:3000?auth=true&email=__"+res.data.email+"__"
+
+          const authToken = 'asfgsedfgheiruhinsdnsadsdfsadfasaf';
+          Cookies.set('token',authToken)
+
+          document.location.href="http://localhost:3000?auth=true&email=__"+res.data.email+"__"
       }else{
         this.setState({ showErr: true })
       }
@@ -35,6 +40,7 @@ export default class Login extends Component {
     console.log("still have error ",err);
   })
   }
+
   render() {
     return (
       <div className="_Signup">

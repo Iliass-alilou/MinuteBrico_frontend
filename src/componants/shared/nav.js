@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom"
 import './style.css'
+//<a href="/?auth=true&email=__ilyasalilou17@gmail.com__"><img alt="..." src="/assets/logo.png" className="logo" /></a>
 export default class Nav extends Component {
   render() {
     return (
       <div className="navbar">
-        <a href="/?auth=true&email=__ilyasalilou17@gmail.com__"><img alt="..." src="/assets/logo.png" className="logo" /></a>
+        <img alt="..." src="/assets/logo.png" className="logo" />
         <ul className="center">
           <a href="#comments" ><li>Comment ça marche</li></a>
           <Link to="/missions" ><li>Missions</li></Link>

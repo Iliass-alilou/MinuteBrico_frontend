@@ -75,7 +75,7 @@ console.log(data[0]);
          <div id="head" className="row">
                
             <div className="col-6"> 
-              <a  href="/home" className="py-2 navbar-link"> <img className="Brand " src="images/logo.png" style={{height:"130px",width:"150px",position:"absolute",top:"0px"}} /></a>   
+              <a  href="/" className="py-2 navbar-link"> <img className="Brand " src="images/logo.png" style={{height:"130px",width:"150px",position:"absolute",top:"0px"}} /></a>   
             </div> 
              
              <div className="col-6  px-1 form-floating" >
