@@ -32,9 +32,6 @@ export default class SignUpEtape2 extends Component {
                     <label className="form-label" htmlFor="form5Example1">Langues<span style={{color:'red'}}>*</span></label>
                     <input type="text" id="form5Example1" className="form-control" required />
                   </div>
-
-                
-                  
                   
 
                   <div className="form-outline mb-4">
