@@ -118,3 +118,19 @@
     top:0;
     left:0;
 }
+
+/*j'ai commence ici*/
+
+
+.fluid-container>.bg{
+    position: absolute;
+    height: 150%;
+    width: 100%;
+    z-index: -1;
+    top:0;
+    left:0;
+}
+.fluid-container>.container>.title{
+    font-size: 30px;
+    margin-top: -5px;
+}
