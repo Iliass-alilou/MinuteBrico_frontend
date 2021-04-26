@@ -68,6 +68,7 @@ export default class SignUpEtape1 extends Component {
                 <InputComp className="passwordInput" title="Mot de passe" placeHolder="Mot de passe" type="password" name="password1" Id="pass1"/>
                 <InputComp className="passwordInput" title="Confimer le mot de passe" placeHolder="Confirmer le mot de passe" type="password" name="password2" Id="pass2"/>
                 <input type="submit" className="Submit" value="S'inscrire" />
+                <button  className="Submit" onClick={()=>document.location.href="http://localhost:3000/signupbrico"}  >Continuer en tant que Bricoleur  </button>
             </form>
             <div className="Or">
               <div className="bar"></div>

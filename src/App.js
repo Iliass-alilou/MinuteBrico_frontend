@@ -1,5 +1,6 @@
 import {BrowserRouter as Router,Route, Switch} from "react-router-dom"
 import Signup from "./componants/auth/signup";
+import SignUpEtape2 from "./componants/auth/signUpEtape2";
 import Login from "./componants/auth/login";
 import Home from "./componants/home/index";
 import Mission from "./componants/home/MissionsComponent";
@@ -25,6 +26,10 @@ function App() {
 
           <Route exact path="/signup" >
             <Signup />
+          </Route>
+
+          <Route exact path="/signupbrico" >
+            <SignUpEtape2 />
           </Route>
 
           <Route exact path="/login" >
