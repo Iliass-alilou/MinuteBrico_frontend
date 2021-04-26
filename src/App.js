@@ -28,7 +28,7 @@ function App() {
             <Signup />
           </Route>
 
-          <Route exact path="/signupbrico" >
+          <Route  path="/bricosignup" >
             <SignUpEtape2 />
           </Route>
 
