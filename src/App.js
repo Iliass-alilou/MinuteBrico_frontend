@@ -9,6 +9,8 @@ import Container from "./componants/formmission/container";
 import React from 'react';
 import ProtectedRoute from "./ProtectRoute";
 import { AuthProvider } from "./componants/context/AuthContext";
+import ContainerBrico from "./componants/switchBrico/containerBrico";
+
 //<AuthProvider> </AuthProvider>
 function App() {
 
@@ -47,6 +49,11 @@ function App() {
           <ProtectedRoute exact path="/createmissions" >
             <Container />
           </ProtectedRoute>
+
+          <ProtectedRoute exact path ="/switchToBricoleur">
+            <ContainerBrico />
+          </ProtectedRoute>
+
         </Switch>
       </Router>
  

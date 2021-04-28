@@ -89,7 +89,7 @@ const SignUpEtape2=()=> {
                     <input type="file"  name="photo" class="form-control" id="photo" />
                     <p>Veuillez importer une photo de vous, préférablement en portrait<br/><span style={{color:'red'}}>Formats supportés: jpeg, jpg, png moins de 2Mo</span></p>
                   </div>
-                     <button type="submit" value="save" />
+                  <button type="submit" value="save" />
                   <button onClick={()=>handelForm()}  style={{position:"relative",right:"40%",left:"35%",fontSize:"25px"}} className="btn btn-primary btn-block mb-4" value="S'inscrire">S'inscrire</button>
                 </form>             
             </div>

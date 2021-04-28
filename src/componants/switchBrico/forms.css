@@ -1,0 +1,33 @@
+
+#FormSwitchBrico{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: rgb(243,211,203);
+    background: linear-gradient(90deg, rgba(243,211,203,1) 0%, rgba(196,196,196,1) 100%);
+    height: auto;
+  }
+
+
+  .form-container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 80px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 15px 16px .17px rgba(0,0,0,0.05);
+  }
+
+  .form-container>.title{
+    padding-top: 5%;
+    font-size: large;
+    margin-top: auto;
+    font-size: 30px;
+    margin-top: -5px;
+    text-align: center;
+    font-weight: bold;
+    
+}

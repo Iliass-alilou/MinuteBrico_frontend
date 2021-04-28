@@ -16,7 +16,7 @@ export default class Nav extends Component {
           <Link to="/login" ><li className="seconnect">Se connecter</li></Link>
           <Link to="/signup" ><li className="signup">S'incrire</li></Link>
         </ul>):(<ul className="auth">
-           <Link to="/devenir-brico" ><li className="devenirBtn">Devenir bricoleur</li></Link>
+           <Link to="/switchToBricoleur" ><li className="devenirBtn">Devenir bricoleur</li></Link>
            <Link to="/createmissions" ><li className="creer_mission">Créer mission</li></Link>
            <Link to="/devenir-brico" ><li className="email">{this.props.data.split('__')[1].split("@")[0]}</li></Link>
         </ul>)

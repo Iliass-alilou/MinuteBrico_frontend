@@ -60,11 +60,13 @@ export default class SignUpEtape1 extends Component {
         var pass2 = document.getElementById("pass2")
         var email = document.getElementById("IdEmail")
         var password = document.getElementById("pass1")
+        var phone = document.getElementById("phoneNumber")
         if(pass1.value===pass2.value && pass1.value!=null){
     
           Axios.post("http://localhost:8080/bricoleur",{
             email : email.value,
             password : password.value,
+            phone : phone.value,
             token:token
                //"iliass@gmail.com"
        })
@@ -114,7 +116,7 @@ export default class SignUpEtape1 extends Component {
               this.save()
             }}>
                 <InputComp className="AdreesInput" title="Adresse e-mail" placeHolder="Adresse e-mail" type="email" name="email" Id="IdEmail"/>
-                <InputComp className="AdreesInput" title="Numéro de telephone" placeHolder="Numéro de telephone" type="phone" name="phone" Id=""/>
+                <InputComp className="AdreesInput" title="Numéro de telephone" placeHolder="Numéro de telephone" type="phone" name="phone" Id="phoneNumber"/>
                 <InputComp className="passwordInput" title="Mot de passe" placeHolder="Mot de passe" type="password" name="password1" Id="pass1"/>
                 <InputComp className="passwordInput" title="Confimer le mot de passe" placeHolder="Confirmer le mot de passe" type="password" name="password2" Id="pass2"/>
                 <input type="submit" className="Submit" value="S'inscrire" />
