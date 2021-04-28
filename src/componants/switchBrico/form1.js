@@ -25,7 +25,7 @@ class Form1 extends Component {
 
     continue = e => {
         e.preventDefault();
-        var firstName=document.getElementById("firstName").value.length;
+        const firstName=document.getElementById("firstName").value.length;
         const lastName=document.getElementById("lastName").value.length;
         const showName=document.getElementById("showName").value.length;
         const birthDate=document.getElementById("birthDate").value.length;
@@ -38,6 +38,7 @@ class Form1 extends Component {
             this.setState({ showErr: true })
         }
     };
+
     back = e => {
         e.preventDefault();
         
@@ -129,7 +130,7 @@ class Form1 extends Component {
                             <p style={{fontSize:"12px"}} >Veuillez importer une photo de vous, préférablement en portrait<br/><span style={{color:'red'}}>Formats supportés: jpeg, jpg, png moins de 2Mo</span></p>
                         </div>
 
-                        <button onClick={this.back} style={{float:'left'}} type="submit" className="btn btn-primary btn-block mb-4"><Link style={{color:"white"}} to="/">Retour</Link></button>
+                        <button onClick={this.back} style={{float:'left'}}  className="btn btn-primary btn-block mb-4"><Link  style={{color:"white"}} to="/">Retour</Link></button>
                         <button onClick={this.continue} style={{float:'right'}} type="submit" className="btn btn-primary btn-block mb-4">Suivant</button>
                     </form>             
                 </div>

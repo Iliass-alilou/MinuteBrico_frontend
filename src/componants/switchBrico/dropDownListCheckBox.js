@@ -14,11 +14,31 @@ function DropDownListCheckBox() {
         {category:"Montage de meubles" , id:8}
         
     ]
+
+    const onSelect= (selectedList, selectedItem) => {
+       //console.log(selectedList)
+       document.getElementById("categorySelected").value= document.getElementById("categorySelected").value+'_'+selectedItem.category;
+        //console.log(document.getElementById("categorySelected").value);
+    }
+    
+    const onRemove=(selectedList, removedItem)=> {
+        //console.log(selectedList)
+        document.getElementById("categorySelected").value= document.getElementById("categorySelected").value.replace('_'+removedItem.category,'');
+        //console.log(document.getElementById("categorySelected").value);
+    }
+    const [selectedValue,setSelectedValue]=useState([]);
+    
+  
+
     const[options]=useState(data);
     return (  
            <div >
                 <label className="form-label" htmlFor="form5Example1">Catégories <span style={{color:'red'}}>*</span> </label>
-                <Multiselect options={options} displayValue="category" />
+                <Multiselect options= {options} selectedValues={selectedValue}
+                             onSelect={onSelect} 
+                             onRemove={onRemove} 
+                             displayValue="category"  />
+                <input type="texte" id="categorySelected" hidden/>
            </div>   
     );
 }

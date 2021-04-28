@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Form1 from './form1';
 import Form2 from './form2';
+import Form3 from './form3';
 
 import './forms.css'
 
@@ -11,15 +12,16 @@ class FormSwitchBrico extends Component {
         photo : '',
         firstName  : '',
         lastName : '',
+        displayName : '' ,
         email : '',
         password: '',
         phone : '',
         birthDate : '',
         adresse : '',
-        category : '',
-        certifications : '',
-        diplomes : '',
-        langues : ''
+        category :[],
+        certifications :[],
+        diplomes :[],
+        langues :[]
     };
 
     nextStep = () => {
@@ -42,6 +44,8 @@ class FormSwitchBrico extends Component {
         const { photo, firstName, lastName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues} = this.state;
         const values = { photo, firstName, lastName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues};
         
+        
+
         switch (step){
             case 1:
                 return(
@@ -61,6 +65,16 @@ class FormSwitchBrico extends Component {
                     values= {values}
                         />
                 );
+                case 2: 
+                return (
+                    <Form3
+                    prevStep = {this.prevStep}
+                    nextStep={this.nextStep}
+                    inputChange = {this.inputChange}
+                    values= {values}
+                        />
+                );
+                
         }
     }
 }
