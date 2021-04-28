@@ -8,7 +8,7 @@ const ProtectedRoute = ({ children , path }) => {
     //const { authToken } =  useContext(AuthContext);
     const authToken = Cookies.get("token");
     if(!authToken){
-        console.log(path + "hicham");
+        console.log(path + "iliass");
         return(
             <Redirect to="/login" />
         )

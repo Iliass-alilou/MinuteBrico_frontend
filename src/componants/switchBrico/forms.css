@@ -21,6 +21,8 @@
     box-shadow: 0 15px 16px .17px rgba(0,0,0,0.05);
   }
 
+ 
+
   .form-container>.title{
     padding-top: 5%;
     font-size: large;
@@ -30,4 +32,11 @@
     text-align: center;
     font-weight: bold;
     
-}
+  }
+
+  .form-container>.Certificat{
+    color: #D1653E;
+    text-align: center;
+  }
+
+
