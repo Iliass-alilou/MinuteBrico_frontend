@@ -18,9 +18,28 @@ class FormSwitchBrico extends Component {
         phone : '',
         birthDate : '',
         adresse : '',
-        category :[],
-        certifications :[],
-        diplomes :[],
+
+        category : {
+            name : '',
+        },
+
+        certifications :{
+            name_certification : '',
+            name_centre : '',
+            date_obtention : '',
+            date_expiration : '',
+            certificat_serie: '',
+            customFile : ''
+        },
+        diplomes :{
+            diplome : '',
+            school : '',
+            annee_entre : '',
+            annee_sortie : '',
+            diplome_serie : '',
+            customFile :''
+
+        },
         langues :[]
     };
 
@@ -41,8 +60,8 @@ class FormSwitchBrico extends Component {
 
     render() {
         const { step } = this.state;
-        const { photo, firstName, lastName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues} = this.state;
-        const values = { photo, firstName, lastName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues};
+        const { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues} = this.state;
+        const values = { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues};
         
         
 
@@ -65,7 +84,7 @@ class FormSwitchBrico extends Component {
                     values= {values}
                         />
                 );
-                case 2: 
+                case 3: 
                 return (
                     <Form3
                     prevStep = {this.prevStep}
