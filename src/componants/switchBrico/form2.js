@@ -7,8 +7,12 @@ import SweetAlert from 'sweetalert2-react';
 class Form2 extends Component {
     state = {
         showErr : false,
+        category:[]
     }
-
+  
+    setCategory=(cat)=>{
+        this.setState({ category: cat });
+    }   
     continue = e => {
         e.preventDefault();
 
@@ -27,7 +31,8 @@ class Form2 extends Component {
         }
         else{
             this.setState({ showErr: true })
-        }
+      
+          }
     };
     back = e => {
         e.preventDefault();
@@ -35,6 +40,7 @@ class Form2 extends Component {
     };
 
     render() {
+     
         return (
             <div className="form-container mt-5 mb-5 " style={{width:"50%"}}>
                 <SweetAlert
@@ -48,13 +54,13 @@ class Form2 extends Component {
                 <div style={{marginLeft:"50px", marginRight:"50px"}}>
                     <form>
 
-                        <DropDownListCheckBox />
+                        <DropDownListCheckBox setCategory={this.setCategory}  />
 
                         <h3 className="Certificat mb-3 mt-5 ml-4 mr-4" style={{color:"#D1653E",fontSize:"20px"}}>Certificat</h3>
 
                         <div className=" mb-4 md-5 mt-4" >
                             <label className="form-label" htmlFor="form5Example1">Nom du certificat<span style={{color:'red'}}>*</span> </label>
-                            <input type="text"  className="form-control" id="name_certification" name="name_certification1" required />
+                            <input type="text"  className="form-control" id="name_certification" name="name_certification1"  required />
                         </div>
 
                         <div className=" mb-4 md-5 mt-4">
@@ -71,15 +77,14 @@ class Form2 extends Component {
                             <label className="form-label" htmlFor="form5Example1">Date d'expiration<span style={{color:'red'}}>*</span></label>
                             <input type="date" className="form-control" id="date_expiration" name="date_obtention1"  required  />
                         </div>
-
                         <div className=" mb-4 md-5 mt-4">
                             <label className="form-label" htmlFor="form5Example1">Numéro de série ou ID<span style={{color:'red'}}>*</span> </label>
                             <input type="text"  className="form-control" id="certificat_serie" name="certificat_serie1" required />
                         </div>
 
                         <div className="form-outline mb-4 mt-5">
-                            <label class="form-label" for="customFile">Scan du certificat<span style={{color:'red'}}>*</span></label>
-                            <input type="file" class="form-control" id="customFile" />
+                            <label className="form-label" for="customFile">Scan du certificat<span style={{color:'red'}}>*</span></label>
+                            <input type="file" className="form-control" id="customFile" />
                             <p style={{fontSize:"12px"}}  >Veuillez importer un scan de votre certificat<br/><span style={{color:'red'}}>Formats supportés: jpeg, jpg, png moins de 2Mo</span></p>
                         </div>
 

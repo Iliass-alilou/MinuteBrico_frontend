@@ -15,6 +15,10 @@ class Form3 extends Component {
     };
 
     CreatBrico = e => {
+        const { 
+            values: { firstName,lastName,displayName,birthDate,city,adresse,photo} 
+        } = this.props;
+
         e.preventDefault();
         const diplome = document.getElementById("diplome").value.length;
         const school =document.getElementById("school").value.length;
@@ -24,15 +28,19 @@ class Form3 extends Component {
         const customFile = document.getElementById("customFile").value.length;
 
         if(diplome!==0 && school!==0  && annee_entre!==0  && annee_sortie!==0  && diplome_serie!==0 && customFile!==0   ){
-            document.location.href=url;
+           alert(firstName +" " + lastName+" " + displayName+" " + birthDate+" " + city+" " +adresse+" " + photo);
         }
         else{
             this.setState({ showErr: true })
         }
+
+
     }    
 
 
     render() {
+     
+
         return (
             <div className="form-container mt-5 mb-5 " style={{width:"50%"}}>
                  <SweetAlert

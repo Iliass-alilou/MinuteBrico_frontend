@@ -2,7 +2,7 @@ import React , {useState} from 'react'
 import {Multiselect} from 'multiselect-react-dropdown'
 import './forms.css'
 
-function DropDownListCheckBox() {
+function DropDownListCheckBox(props) {
     const data=[
         {category:"Bricolage de la maison" , id:1},
         {category:"Peinture" , id:2},
@@ -16,15 +16,16 @@ function DropDownListCheckBox() {
     ]
 
     const onSelect= (selectedList, selectedItem) => {
+      //  setCategory(selectedItem);
        //console.log(selectedList)
        document.getElementById("categorySelected").value= document.getElementById("categorySelected").value+'_'+selectedItem.category;
-        //console.log(document.getElementById("categorySelected").value);
+       alert(" selected "+selectedList);
+     //  props.setCategory();
     }
     
     const onRemove=(selectedList, removedItem)=> {
         //console.log(selectedList)
         document.getElementById("categorySelected").value= document.getElementById("categorySelected").value.replace('_'+removedItem.category,'');
-        //console.log(document.getElementById("categorySelected").value);
     }
     const [selectedValue,setSelectedValue]=useState([]);
     

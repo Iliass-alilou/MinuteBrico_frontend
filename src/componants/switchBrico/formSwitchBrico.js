@@ -18,10 +18,9 @@ class FormSwitchBrico extends Component {
         phone : '',
         birthDate : '',
         adresse : '',
+        city : '',
 
-        category : {
-            name : '',
-        },
+        category : [],
 
         certifications :{
             name_certification : '',
@@ -40,7 +39,10 @@ class FormSwitchBrico extends Component {
             customFile :''
 
         },
-        langues :[]
+        langues :{
+            name_language : '',
+
+        }
     };
 
     nextStep = () => {

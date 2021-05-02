@@ -65,27 +65,27 @@ class Form1 extends Component {
                     <form>
                         <div className="form-outline mb-4 md-5">
                             <label className="form-label" htmlFor="form5Example1">Votre Nom<span style={{color:'red'}}>*</span> </label>
-                            <input type="text"  className="form-control" id="firstName" name="firstName1" value={values.firstName1} required />
+                            <input type="text"  className="form-control" id="firstName" name="firstName1" onChange={inputChange('firstName')} value={values.firstName} required />
                         </div>
 
                         <div className="form-outline mb-4 md-5">
                             <label className="form-label" htmlFor="form5Example1">Votre Prénom<span style={{color:'red'}}>*</span> </label>
-                            <input type="text"  className="form-control" id="lastName" name="lastName1" value={values.lastName1}  required />
+                            <input type="text"  className="form-control" id="lastName" name="lastName1" onChange={inputChange('lastName')} value={values.lastName}  required />
                         </div>
 
                         <div className="form-outline mb-4 md-5">
                             <label className="form-label" htmlFor="form5Example1">Nom d'affichage <span style={{color:'red'}}>*</span> </label>
-                            <input type="text" className="form-control" id="showName" name="showName1" value={values.showName1} required />
+                            <input type="text" className="form-control" id="showName" name="showName1" onChange={inputChange('displayName')} value={values.displayName} required />
                         </div>
 
                         <div className="birthDate mb-4">
                             <label className="form-label" htmlFor="form5Example1">Date de Naissance<span style={{color:'red'}}>*</span></label>
-                            <input type="date" className="form-control" id="birthDate" name="birthDate1" value={values.birthDate1} required  />
+                            <input type="date" className="form-control" id="birthDate" name="birthDate1" onChange={inputChange('birthDate')} value={values.birthDate} required  />
                         </div>
                         
                         <div className=" mb-4" style={{justifyContent:"space-between",display:"inline-block"}} >
                             <label className="form-label" htmlFor="form5Example2">Ville<span style={{color:'red'}}>*</span></label> 
-                            <select  className="form-select" id="city" name="city1" value={values.city1} required>
+                            <select  className="form-select" id="city" name="city1" onChange={inputChange('city')}  value={values.city} required>
                                 <option selected></option>
                                 <option value="Rabat">Rabat</option>
                                 <option value="Agadir">Agadir</option>
@@ -103,7 +103,7 @@ class Form1 extends Component {
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div className="form-outline mb-4 md-5" style={{justifyContent:"space-between",display:"inline-block"}} >
                             <label className="form-label" htmlFor="form5Example1">Adresse<span style={{color:'red'}}>*</span> </label>
-                            <input type="text"  className="form-control" id="adresse" name="adresse1" value={values.adresse1}  required />
+                            <input type="text"  className="form-control" id="adresse" name="adresse1" onChange={inputChange('adresse')} value={values.adresse}  required />
                         </div>
                         
 
@@ -123,7 +123,7 @@ class Form1 extends Component {
 
                         <div className="form-outline mb-4 mt-5">
                             <label class="form-label" for="customFile">Photo de profil</label>
-                            <input type="file" class="form-control" id="customFile" />
+                            <input type="file" class="form-control" id="customFile"  onChange={inputChange('photo')} value={values.photo} />
                             <p style={{fontSize:"12px"}} >Veuillez importer une photo de vous, préférablement en portrait<br/><span style={{color:'red'}}>Formats supportés: jpeg, jpg, png moins de 2Mo</span></p>
                         </div>
 
