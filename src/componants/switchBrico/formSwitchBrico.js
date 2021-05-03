@@ -22,16 +22,16 @@ class FormSwitchBrico extends Component {
 
         category : [],
 
-      certifications : {
+      certifications : [{
             name_certification : '',
             name_centre : '',
             date_obtention : '',
             date_expiration : '',
             certificat_serie: '',
             customFile : ''
-        },
+        }],
      
-       diplomes : {
+       diplomes : [{
             diplome : '',
             school : '',
             annee_entre : '',
@@ -39,12 +39,12 @@ class FormSwitchBrico extends Component {
             diplome_serie : '',
             customFile :''
 
-        },
+        }],
 
-        langues :{
+        langues :[{
             name_language : '',
 
-        }
+        }]
     };
 
     nextStep = () => {

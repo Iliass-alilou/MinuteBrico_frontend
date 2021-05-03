@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Component } from 'react';
 import SweetAlert from 'sweetalert2-react';
 
@@ -29,6 +30,19 @@ class Form3 extends Component {
 
         if(diplome!==0 && school!==0  && annee_entre!==0  && annee_sortie!==0  && diplome_serie!==0 && customFile!==0   ){
            alert(firstName +" " + lastName+" " + displayName+" " + birthDate+" " + city+" " +adresse+" " + photo);
+            axios.post("http://localhost:8080/bricoleur",
+            {
+                firstName:firstName,
+                lastName:lastName,
+                birthDate:birthDate,
+                adresse:adresse,
+                category:category,
+                certifications:certifications
+            })
+            .then(res=>{
+                alert();
+            })
+
         }
         else{
           //  this.setState({ showErr: true })
