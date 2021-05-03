@@ -19,8 +19,16 @@ function DropDownListCheckBox(props) {
       //  setCategory(selectedItem);
        //console.log(selectedList)
        document.getElementById("categorySelected").value= document.getElementById("categorySelected").value+'_'+selectedItem.category;
-       alert(" selected "+selectedList);
-     //  props.setCategory();
+       //alert(" selected "+selectedList);
+       const catList=[];
+       for(var i=0;i<selectedList.length;i++){
+             const cat={
+                 name:selectedList[i].category
+             }
+             catList.push(cat);
+       }
+     props.setCategory(catList);
+     //props.inputChange(catList);
     }
     
     const onRemove=(selectedList, removedItem)=> {
@@ -38,6 +46,7 @@ function DropDownListCheckBox(props) {
                 <Multiselect options= {options} selectedValues={selectedValue}
                              onSelect={onSelect} 
                              onRemove={onRemove} 
+                             showCheckbox={true}
                              displayValue="category"  />
                 <input type="texte" id="categorySelected" hidden/>
            </div>   

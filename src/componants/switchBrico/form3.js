@@ -16,7 +16,7 @@ class Form3 extends Component {
 
     CreatBrico = e => {
         const { 
-            values: { firstName,lastName,displayName,birthDate,city,adresse,photo} 
+            values: { firstName,lastName,displayName,birthDate,city,adresse,photo,category,certifications} 
         } = this.props;
 
         e.preventDefault();
@@ -31,7 +31,8 @@ class Form3 extends Component {
            alert(firstName +" " + lastName+" " + displayName+" " + birthDate+" " + city+" " +adresse+" " + photo);
         }
         else{
-            this.setState({ showErr: true })
+          //  this.setState({ showErr: true })
+          alert(certifications.name_certification);
         }
 
 

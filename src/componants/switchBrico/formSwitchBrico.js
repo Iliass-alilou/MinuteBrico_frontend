@@ -22,7 +22,7 @@ class FormSwitchBrico extends Component {
 
         category : [],
 
-        certifications :{
+      certifications : {
             name_certification : '',
             name_centre : '',
             date_obtention : '',
@@ -30,7 +30,8 @@ class FormSwitchBrico extends Component {
             certificat_serie: '',
             customFile : ''
         },
-        diplomes :{
+     
+       diplomes : {
             diplome : '',
             school : '',
             annee_entre : '',
@@ -39,6 +40,7 @@ class FormSwitchBrico extends Component {
             customFile :''
 
         },
+
         langues :{
             name_language : '',
 
@@ -57,8 +59,23 @@ class FormSwitchBrico extends Component {
     inputChange = input => e => {
         this.setState({
             [input]: e.target.value 
-        })
+           
+        });
+    
+    }
+    inputChangecertif = (certif) => {
+        this.setState({
+            certifications: certif
+           
+        });
+    
+    }
+    setCategory=(cat)=>{
+        this.setState({ category: cat });
+        
     };
+  
+   
 
     render() {
         const { step } = this.state;
@@ -74,18 +91,21 @@ class FormSwitchBrico extends Component {
                     nextStep={this.nextStep}
                     prevStep = {this.prevStep}
                     inputChange = {this.inputChange}
+
                     values= {values}
                     />
                 );
             case 2: 
                 return (
-                    <Form2
+                   <Form2
                     prevStep = {this.prevStep}
                     nextStep={this.nextStep}
                     inputChange = {this.inputChange}
+                    setCategory={this.setCategory}
                     values= {values}
+                    inputChangecertif={this.inputChangecertif}
                         />
-                );
+                                    );
                 case 3: 
                 return (
                     <Form3
