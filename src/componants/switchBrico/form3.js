@@ -27,17 +27,26 @@ class Form3 extends Component {
         const annee_sortie = document.getElementById("annee_sortie").value.length;
         const diplome_serie = document.getElementById("diplome_serie").value.length;
         const customFile = document.getElementById("customFile").value.length;
+        const diplomes=[{
+            diplome:diplome,
+            school:school,
+            annee_entre:annee_entre,
+            annee_sortie:annee_sortie,
+            diplome_serie:diplome_serie,
+            customFile:customFile
+        }]
 
         if(diplome!==0 && school!==0  && annee_entre!==0  && annee_sortie!==0  && diplome_serie!==0 && customFile!==0   ){
-           alert(firstName +" " + lastName+" " + displayName+" " + birthDate+" " + city+" " +adresse+" " + photo);
-            axios.post("http://localhost:8080/bricoleur",
+           alert(certifications[0].name_certification);
+           axios.post("http://localhost:8080/bricoleur",
             {
                 firstName:firstName,
                 lastName:lastName,
                 birthDate:birthDate,
                 adresse:adresse,
                 category:category,
-                certifications:certifications
+                certifications:certifications,
+                diplomes:diplomes
             })
             .then(res=>{
                 alert();

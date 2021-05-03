@@ -41,7 +41,7 @@ class Signup extends Component {
             this.setState({
               showErr:true
             })
-            
+            this.continue();
           })
     
         }else{

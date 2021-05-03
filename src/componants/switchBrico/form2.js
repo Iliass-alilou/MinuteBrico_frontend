@@ -42,14 +42,14 @@ class Form2 extends Component {
 
         
         if( name_certification!==0  && name_centre!==0 && date_obtention!==0  && date_expiration!==0  && certificat_serie!==0 && customFile!==0 && categorySelected!==0){
-            const certif={
+            const certif=[{
                 name_certification :this.state.name_certification ,
                 name_centre : this.state.name_centre,
                 date_obtention : this.state.date_obtention,
                 date_expiration : this.state.date_expiration,
                 certificat_serie: this.state.certificat_serie,
                 customFile : this.state.customFile
-            };
+            }];
             this.props.inputChangecertif(certif);
             this.props.nextStep();
         }
