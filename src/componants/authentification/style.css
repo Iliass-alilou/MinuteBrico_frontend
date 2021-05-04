@@ -4,11 +4,112 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    height: auto;    
+ 
+    
 }
+/**********************  login  -*************/
+._login{
+    position:relative;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._login>.SignUpPage{
+    background-color: white;
+    display:flex;
+    width: 35%;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+
+._login>.SignUpPage>a>.logo{
+    width: 160px;
+    height: 160px;
+}
+._login>.SignUpPage>.title{
+    font-size: 30px;
+    margin-top: -5px;
+}
+
+._login>.SignUpPage>form{
+    margin-top: -14px;
+}
+._login>.SignUpPage>form>.InputComp>.Input{
+    width: 300px;
+    height: 38px;
+}
+
+.nom_pre>.InputComp>.Input{
+    width: 140px;
+
+}
+._login>.SignUpPage>form>.Submit{
+    margin-top: 40px;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: #D1653E;
+    color:white;
+    width:310px;
+    height: 40px;
+    cursor: pointer;
+    font-size:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+._login>.SignUpPage>.Or{
+    display: flex;
+    justify-content: space-around;
+    width: 310px;
+    align-items: center;
+}
+._login>.SignUpPage>.Or>.bar{
+    height: 1px;
+    width: 100px;
+    background-color: black;
+}
+._login>.SignUpPage>.Or>.content{
+    font-size: 20px;
+}
+._login>.SignUpPage>.DejaSeconnact{
+    font-size: 15px;
+    font-family: Arial;
+    margin-bottom: 30px;
+}
+._login>.SignUpPage>.DejaSeconnact>a{
+    color: #D1653E;
+    font-weight: 700;
+}
+
+._login>.bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top:0;
+    left:0;
+}
+
+
+
+
+/* ***************  end login *********************/
+
 ._Signup>.SignUpPage{
     background-color: white;
     display:flex;
-    width: 30%;
+    width: 35%;
     flex-direction: column;
     align-items:center;
     justify-content:space-between;
@@ -84,3 +185,49 @@
     top:0;
     left:0;
 }
+
+
+
+.Brico{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: rgb(243,211,203);
+    background: linear-gradient(90deg, rgba(243,211,203,1) 0%, rgba(196,196,196,1) 100%);
+    height: auto;
+  }
+
+
+  .form-container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 80px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 15px 16px .17px rgba(0,0,0,0.05);
+  }
+
+ 
+
+  .form-container>.title{
+    padding-top: 5%;
+    font-size: large;
+    margin-top: auto;
+    font-size: 30px;
+    margin-top: -5px;
+    text-align: center;
+    font-weight: bold;
+    
+  }
+
+  .form-container>.Certificat{
+    color: #D1653E;
+    text-align: center;
+  }
+
+
+
+

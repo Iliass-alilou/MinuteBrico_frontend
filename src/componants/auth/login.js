@@ -43,7 +43,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="_Signup">
+      <div className="_login">
           <div className="SignUpPage">
 
 

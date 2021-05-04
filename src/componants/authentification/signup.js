@@ -24,8 +24,8 @@ class Signup extends Component {
         if(pass1.value==pass2.value  && pass12!==0 && pass22!==0 ){
     
           Axios.post("http://localhost:8080/registration",{
-            firstName :"iliass",
-            lastName : "alilou",
+            firstName :"",
+            lastName : "",
             email : email.value,
             password : password.value   //"iliass@gmail.com"
        })
@@ -41,7 +41,7 @@ class Signup extends Component {
             this.setState({
               showErr:true
             })
-            this.continue();
+            //this.continue();
           })
     
         }else{
@@ -72,12 +72,14 @@ class Signup extends Component {
         }
         else{
             this.setState({ showErrbrico: true })
+            
         }
      };
 
      
 
     render() {
+       const { values, inputChange } = this.props;
         return (
             <div className="_Signup">
                 <div className="SignUpPage">
@@ -111,11 +113,28 @@ class Signup extends Component {
                     <p className="title">Rejoindre MinuteBrico</p>
 
                     <form >
+                        <div className="form-outline mb-4 md-5">
+                            <label className="form-label" htmlFor="form5Example1">Adresse e-mail <span style={{color:'red'}}>*</span> </label>
+                            <input placeHolder="Adresse e-mail" type="email" className="form-control" id="IdEmail" name="email" onChange={inputChange('email')} value={values.email} required />
+                        </div>
+                        <div className="form-outline mb-4 md-5">
+                            <label className="form-label" htmlFor="form5Example1">Numéro de telephone <span style={{color:'red'}}>*</span> </label>
+                            <input placeHolder="Numéro de telephone" type="phone" className="form-control" id="phoneNumber" name="phone" onChange={inputChange('phone')} value={values.phone} required />
+                        </div>
+                        <div className="form-outline mb-4 md-5">
+                            <label className="form-label" htmlFor="form5Example1">Mot de passe <span style={{color:'red'}}>*</span> </label>
+                            <input placeHolder="Mot de passe" type="password" className="form-control" id="pass1" name="password1" onChange={inputChange('password')} value={values.password} required />
+                        </div>
+                        <div className="form-outline mb-4 md-5">
+                            <label className="form-label" htmlFor="form5Example1">Confimer le mot de passe <span style={{color:'red'}}>*</span> </label>
+                            <input placeHolder="Confimer le mot de passe" type="password" className="form-control" id="pass2" name="password2"  required />
+                        </div>
 
-                        <InputComp className="AdreesInput" title="Adresse e-mail" placeHolder="Adresse e-mail" type="email" name="email" Id="IdEmail"/>
+
+                       {/* <InputComp className="AdreesInput" title="Adresse e-mail" placeHolder="Adresse e-mail" type="email" name="email" Id="IdEmail"/>
                         <InputComp className="AdreesInput" title="Numéro de telephone" placeHolder="Numéro de telephone" type="phone" name="phone" Id="phoneNumber"/>
                         <InputComp className="passwordInput" title="Mot de passe" placeHolder="Mot de passe" type="password" name="password1" Id="pass1"/>
-                        <InputComp className="passwordInput" title="Confimer le mot de passe" placeHolder="Confirmer le mot de passe" type="password" name="password2" Id="pass2"/>
+                        <InputComp className="passwordInput" title="Confimer le mot de passe" placeHolder="Confirmer le mot de passe" type="password" name="password2" Id="pass2"/>*/}
                         <input onClick={(e)=>{
                            this.onSubmit(e,1)                      
                         }} type="submit" className="Submit" value="S'inscrire" />

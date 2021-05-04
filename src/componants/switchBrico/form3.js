@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import SweetAlert from 'sweetalert2-react';
 
 const url = "http://localhost:3000/profile_brico";
+//const url = "/";
 
 class Form3 extends Component {
 
@@ -17,7 +18,7 @@ class Form3 extends Component {
 
     CreatBrico = e => {
         const { 
-            values: { firstName,lastName,displayName,birthDate,city,adresse,photo,category,certifications} 
+            values: { firstName,lastName,displayName,birthDate,city,adresse,photo,category,certifications,phone} 
         } = this.props;
 
         e.preventDefault();
@@ -37,25 +38,30 @@ class Form3 extends Component {
         }]
 
         if(diplome!==0 && school!==0  && annee_entre!==0  && annee_sortie!==0  && diplome_serie!==0 && customFile!==0   ){
-           alert(certifications[0].name_certification);
+           //alert(certifications[0].name_certification);
            axios.post("http://localhost:8080/bricoleur",
             {
                 firstName:firstName,
                 lastName:lastName,
+                displayName : '',
+                city : '' ,
+                photo : '',
                 birthDate:birthDate,
                 adresse:adresse,
+                phone : '',
                 category:category,
                 certifications:certifications,
                 diplomes:diplomes
             })
             .then(res=>{
-                alert();
+               // alert("merci de verifier votre boite pour confirmer votre compte");
+                document.location.href=url
             })
 
         }
         else{
-          //  this.setState({ showErr: true })
-          alert(certifications.name_certification);
+            this.setState({ showErr: true })
+          //alert(certifications.name_certification);
         }
 
 

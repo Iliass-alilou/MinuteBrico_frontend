@@ -11,6 +11,7 @@ import ProtectedRoute from "./ProtectRoute";
 import { AuthProvider } from "./componants/context/AuthContext";
 import ContainerBrico from "./componants/switchBrico/containerBrico";
 import ContainerAuth from "./componants/authentification/containerAuth";
+import WelcomeBricoPage from "./componants/welcomeBricoPage/WelcomeBricoPage";
 
 //<AuthProvider> </AuthProvider>
 function App() {
@@ -51,6 +52,15 @@ function App() {
           <Route exact path="/missions" >
             <Mission />
           </Route>
+
+          {/*  this for showing page of brico  */}
+
+          <ProtectedRoute exact path="/profile_brico" >
+            <WelcomeBricoPage />
+          </ProtectedRoute>
+
+
+
 
           <ProtectedRoute exact path="/createmissions" >
             <Container />
