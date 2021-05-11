@@ -12,6 +12,7 @@ import { AuthProvider } from "./componants/context/AuthContext";
 import ContainerBrico from "./componants/switchBrico/containerBrico";
 import ContainerAuth from "./componants/authentification/containerAuth";
 import WelcomeBricoPage from "./componants/welcomeBricoPage/WelcomeBricoPage";
+import Review from "./componants/Reviews/review";
 
 //<AuthProvider> </AuthProvider>
 function App() {
@@ -28,26 +29,28 @@ function App() {
             <Home />
           </Route>
 
-          {/*<Route exact path="/signup" >
-            <Signup />
-          </Route>*/}
 
           <Route exact path="/signup" >
             <ContainerAuth />
           </Route>
 
+          <ProtectedRoute exact path="/profile_brico" >
+            <WelcomeBricoPage />
+          </ProtectedRoute>
+          
+          {/*     test Reviews      */}
 
-         {/* <Route  path="/bricosignup" >
-            <SignUpEtape2 />
-          </Route>*/}
+          <ProtectedRoute exact path="/evaluate_brico">
+            <Review />
+          </ProtectedRoute>
+
+       
 
           <Route exact path="/login" >
             <Login />
           </Route>
 
-          {/*<ProtectedRoute exact path="/devenir-brico" >
-            <Empty />
-          </ProtectedRoute>*/}
+       
 
           <Route exact path="/missions" >
             <Mission />

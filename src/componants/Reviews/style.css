@@ -1,0 +1,16 @@
+
+.review{
+    padding-left: 35%;
+}
+.review>.star{
+    padding-left: 35%; 
+}
+
+input[type="radio"]{
+    display:"none";
+}
+
+.star{
+    cursor: pointer;
+    transition: color 200ms;
+}
