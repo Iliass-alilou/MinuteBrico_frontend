@@ -23,7 +23,7 @@ class Form3 extends Component {
         } = this.props;
 
         e.preventDefault();
-        const descriptionProfil = document.getElementById("descriptionProfil").value.length;
+        const description = document.getElementById("descriptionProfil").value.length;
         const diplome = document.getElementById("diplome").value.length;
         const school =document.getElementById("school").value.length;
         const annee_entre = document.getElementById("annee_entre").value.length;
@@ -38,8 +38,9 @@ class Form3 extends Component {
             diplome_serie:diplome_serie,
             customFile:customFile
         }]
+        const descriptionProfil = document.getElementById("descriptionProfil") ;
 
-        if(descriptionProfil!==0 && diplome!==0 && school!==0  && annee_entre!==0  && annee_sortie!==0  && diplome_serie!==0 && customFile!==0   ){
+        if(description!==0 && diplome!==0 && school!==0  && annee_entre!==0  && annee_sortie!==0  && diplome_serie!==0 && customFile!==0   ){
            //alert(certifications[0].name_certification);
            axios.post("http://localhost:8080/bricoleur",
             {
@@ -125,7 +126,7 @@ class Form3 extends Component {
                             <textarea  
                                     id="descriptionProfil"                                
                                     type="textarea"
-                                    name="commentReview"
+                                    name="descriptionProfil"
                                     rows="4" cols="60" 
                                     placeholder="  Merci de donner Une Petite Description pour ton Profile :
                                                                                                         - vos points forts ?

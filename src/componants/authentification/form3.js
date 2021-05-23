@@ -22,6 +22,7 @@ class Form3 extends Component {
         } = this.props;
 
         e.preventDefault();
+        const description = document.getElementById("descriptionProfil").value.length;
         const diplome = document.getElementById("diplome").value.length;
         const school =document.getElementById("school").value.length;
         const annee_entre = document.getElementById("annee_entre").value.length;
@@ -36,8 +37,9 @@ class Form3 extends Component {
             diplome_serie:diplome_serie,
             customFile:customFile
         }]
+        const descriptionProfil = document.getElementById("descriptionProfil") ;
 
-        if(diplome!==0 && school!==0  && annee_entre!==0  && annee_sortie!==0  && diplome_serie!==0 && customFile!==0   ){
+        if(description !==0 &&diplome!==0 && school!==0  && annee_entre!==0  && annee_sortie!==0  && diplome_serie!==0 && customFile!==0   ){
            //alert(certifications[0].name_certification);
            axios.post("http://localhost:8080/bricoleur",
             {
@@ -54,7 +56,8 @@ class Form3 extends Component {
                 category:category,
                 langues:langues,
                 certifications:certifications,
-                diplomes:diplomes
+                diplomes:diplomes,
+                descriptionProfil:descriptionProfil
             }).then(Swal.fire({
                 title: 'Merci',                
                 text: 'Votre Profile Bricoleur a été bien Créé',
@@ -119,6 +122,22 @@ class Form3 extends Component {
                                 <input type="file" class="form-control" id="customFile" />
                                 <p style={{fontSize:"12px"}}  >Veuillez importer un scan de votre diplôme<br/><span style={{color:'red'}}>Formats supportés: jpeg, jpg, png moins de 2Mo</span></p>
                             </div>
+
+                            <div className="form-outline mb-4 mt-5">
+                            <label class="form-label" for="descriptionProfil"> Description Pour ton Profile<span style={{color:'red'}}>*</span></label>
+                                <textarea  
+                                        id="descriptionProfil"                                
+                                        type="textarea"
+                                        name="descriptionProfil"
+                                        rows="4" cols="60" 
+                                        placeholder="  Merci de donner Une Petite Description pour ton Profile :
+                                                                                                            - vos points forts ?
+                                                                                                            - vos Services ?
+                                                                                                            - vos experiences.." 
+                                
+                                />
+                            </div>
+
                             <button onClick={this.back}  style={{float:'left'}}    className="btn btn-primary btn-block mb-4">Retour</button>
                             <button onClick={this.CreatBrico}  style={{float:'right'}} type="submit" className="btn btn-primary btn-block mb-4">Enregistrer</button>
 

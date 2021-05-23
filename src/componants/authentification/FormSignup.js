@@ -20,7 +20,7 @@ class FormSignup extends Component {
         city : '',
         langues: [],
         category : [],
-
+        descriptionProfil : '',
       certifications : [{
             name_certification : '',
             name_centre : '',
@@ -78,8 +78,8 @@ class FormSignup extends Component {
   
     render() {
         const { step } = this.state;
-        const { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues} = this.state;
-        const values = { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues};
+        const { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues,descriptionProfil} = this.state;
+        const values = { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues,descriptionProfil};
         
 
         switch (step){
