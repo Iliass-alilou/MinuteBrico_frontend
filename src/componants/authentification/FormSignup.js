@@ -18,9 +18,9 @@ class FormSignup extends Component {
         birthDate : '',
         adresse : '',
         city : '',
-
+        langues: [],
         category : [],
-
+        descriptionProfil : '',
       certifications : [{
             name_certification : '',
             name_centre : '',
@@ -40,10 +40,7 @@ class FormSignup extends Component {
 
         }],
 
-        langues :[{
-            name_language : '',
-
-        }]
+        
     };
 
     nextStep = () => {
@@ -73,11 +70,16 @@ class FormSignup extends Component {
         this.setState({ category: cat });
         
     };
+   // setLangue
+   setLangue=(cat)=>{
+    this.setState({ langues: cat });
+    
+   };
   
     render() {
         const { step } = this.state;
-        const { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues} = this.state;
-        const values = { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues};
+        const { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues,descriptionProfil} = this.state;
+        const values = { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues,descriptionProfil};
         
 
         switch (step){
@@ -95,7 +97,7 @@ class FormSignup extends Component {
                         nextStep={this.nextStep}
                         prevStep = {this.prevStep}
                         inputChange = {this.inputChange}
-
+                        setLangue={this.setLangue}
                         values= {values}
                             />
                     );
