@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 import './style.css'
 import axios from 'axios'
 
-const url ="http://localhost:3000/profile_brico"  // on preciser une autre url apres (this is just)
+const url ="http://localhost:3000/profile_brico_kaoutarDetails"  // on preciser une autre url apres (this is just)
 const Review = () => {
 
     const [rating , setRating]=useState(null);
@@ -28,7 +28,7 @@ const Review = () => {
                 comment : review
 
             })  .then(Swal.fire({
-                title: 'Merci',
+                title: 'Merci',                
                 text: 'votre avis a été bien enregistré',
                 icon: 'success',
                 button: 'Ok'
@@ -42,10 +42,10 @@ const Review = () => {
        else{
           Swal.fire({
             title: 'Merci de donner un commentaire ',
+            titleStyling: false,
             text: '',
             icon: 'error',
-            button: 'Ok'
-            
+            button: 'Ok'          
           })
        }
    }   
@@ -59,17 +59,19 @@ const Review = () => {
                 return(
                     <label className="label">
                         {/* pour separer les etoils */}
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <input 
                             id="star"
                             className="radio"
                             type="radio" 
                             name="rating" 
                             value ={ratingValue}
-                            onClick={()=>setRating(ratingValue)}                         
+                            onClick={()=>setRating(ratingValue)}   
+                            style={{paddingLeft:"20%"}}                      
                             hidden
                             />
                         <FaStar 
+                              style={{}}
                               className="star"
                               size={50}
                               color={ratingValue <= (hover || rating) ? "#D1653E" : "#e4e5e9" } 
@@ -104,8 +106,8 @@ const Review = () => {
                     <br/>
                     <br/>
                     <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button onClick={SendReview}  type="submit" className="btn btn-primary  mb-4">Enregistrer</button>
+                </form>
+                <button  style={{width:"36%",backgroundColor:"#D4643C"}} onClick={SendReview}  type="submit" className="btn  mr-4 mb-4">Enregistrer</button>
             </div>  
         </div>
     )

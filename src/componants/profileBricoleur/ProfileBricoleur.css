@@ -1,0 +1,23 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+
+
+.container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 80px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgb(243,211,203);
+    background: linear-gradient(90deg, rgba(243,211,203,1) 0%, rgba(196,196,196,1) 100%);
+    height: auto;
+  }

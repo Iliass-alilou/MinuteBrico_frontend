@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import SweetAlert from 'sweetalert2-react';
 
-const url = "http://localhost:3000/profile_brico";
+const url = "http://localhost:3000/profile_brico_kaoutarDetails";
 //const url = "/";
 
 class Form3 extends Component {

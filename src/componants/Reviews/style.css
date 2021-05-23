@@ -1,5 +1,5 @@
 
-.review{
+/*.review{
     padding-left: 35%;
 }
 .review>.star{
@@ -13,4 +13,4 @@ input[type="radio"]{
 .star{
     cursor: pointer;
     transition: color 200ms;
-}
+}*/

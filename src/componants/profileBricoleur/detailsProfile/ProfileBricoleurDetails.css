@@ -1,0 +1,234 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    /* colors */
+    --body-bg-color: #FFFFFF;
+    --sidebar-bg-color: #f4f4f4;
+    --text-color: #333333;
+    --title-color: #111111;
+    --date-color: #1f94c2;
+
+    
+    --icon-color:var(--text-color);
+    --circle-color: #AAA;
+    --circle-color-plain: #555;  
+    --dark-icon-color:var(--dark-text-color);
+    --dark-circle-color: rgb(108, 108, 108);
+    --dark-circle-color-plain: rgb(238, 238, 238);
+  
+    /* bonus */
+  
+    /* bae5ff */
+  
+    /* Fonts */
+    --body-font: "Roboto", "Sans-serif";
+    --h1-font-size: 1.7rem;
+    --h2-font-size: 1.3rem;
+    --h3-font-size: 1.1rem;
+    --h4-font-size: 1rem;
+  
+    /* Helpers */
+    --spacing-1: .4rem;
+    --spacing-2: .8rem;
+    --spacing-3: 1.2rem;
+    --spacing-4: 1.5rem;
+    --spacing-5: 2rem;
+  }
+  
+  body {
+    font-family: var(--body-font);  
+    font-weight: 200;
+    background-color: var(--bg-color);
+    color: var(--text-color);  
+  }
+  .dark {  
+    background-color: var(--dark-body-bg-color);
+    color: var(--dark-text-color);
+  }
+  
+  h1, h2, h3 {
+    margin-bottom: var(--spacing-1);
+    font-weight: 400;    
+  }
+  
+  .dark h1, .dark h2, .dark h3 {
+    color: var(--dark-title-color);
+  }
+  
+  h1 {
+    font-size:var(--h1-font-size);
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    display: flex;
+    align-items: center;  
+    margin-bottom: var(--spacing-4);
+    font-size: var(--h2-font-size);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background-color: #d56c47;
+    color: var(--body-bg-color);
+    padding: 1rem;
+  }
+  
+  h3 {
+    font-size: var(--h3-font-size);
+    padding-top: 10px;
+    color: black;
+  }
+  
+  h4 {
+    font-size: var(--h4-font-size);
+  }
+  
+  p {
+    margin-bottom: var(--spacing-2);
+  }
+  
+  ul {
+    padding-left:1.3rem;
+  }
+  
+  li {
+    margin-bottom: var(--spacing-2);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  .dark a {
+    color: var(--dark-text-color);
+  }
+  
+  button {
+    background: none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .dark button {
+    color: var(--dark-text-color);
+  }
+  
+  /* Helpers */
+  .mb3 {
+    margin-bottom: var(--spacing-3);
+  }
+  .mb5 {
+    margin-bottom: var(--spacing-5);
+  }
+  
+  /* Grids */
+  .grid__row {
+    margin: var(--spacing-3) 0;
+    
+  }
+  @media screen and (min-width:768px) {
+    .grid__container {
+      padding: 4rem;
+      display: grid;  
+      grid-template-columns: 1fr 3fr;
+    }
+    .grid__row {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin: 0;
+    }
+  }
+  
+  /* Layout */
+  
+  .sidebar { 
+     /* bonus
+    width:100%;
+    position: relative;
+    */
+    padding:3rem;
+  }
+  
+
+  .dark .sidebar {
+    background-color: var(--dark-sidebar-bg-color);
+  }
+  
+  .actions {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main {
+    padding:3.5rem;  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+    max-width: 1050px;
+
+  }
+  
+  .circle {
+    display: inline-block;
+    width:20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background:var(--circle-color);
+  }
+  .circle--plain {  
+    background:var(--circle-color-plain);
+  }
+  
+  .dark .circle {
+    background: var(--dark-circle-color);
+  }
+  .dark .circle--plain {
+    background: var(--dark-circle-color-plain);
+  }
+  
+  /* Generate PDF */
+  
+  #cv-print {
+    width: 100% !important;
+  } 
+  .cv-print ul {
+    margin:0;
+    padding:0;
+    
+  }
+  .cv-print ul li {
+    list-style-type:none;
+  }
+  .cv-print ul li:before {
+    content: "•";
+    display: inline-block; 
+    font-size: 110%;
+    padding-right: 10px;
+  }
+  .cv-print .grid__container {
+    font-size:12px !important;
+    max-width: 210mm;
+  }
+  .cv-print .sidebar {
+    height: 297mm;
+  }
+  .cv-print .user__infos svg {
+    display: none !important;
+  }
+  .cv-print .circle {
+    width:10px;
+    height:10px;
+  }
+  .cv-print .grid__date {
+    margin-top:5px;
+  }

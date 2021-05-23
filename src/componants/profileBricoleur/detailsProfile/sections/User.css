@@ -1,0 +1,80 @@
+.user {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  h2{
+    color: Black;
+  }
+
+  .user__name {
+    text-align: center;  
+  }
+  .btn {
+    width: fill;
+  }
+  .user__info {
+    text-align: center;  
+    padding:var(--spacing-3) 0 var(--spacing-1) 0;
+  }
+  .user__info {
+    display: flex;    
+    text-align: center;  
+  }
+
+/*css ajouter par iliass*/
+
+  #Modal{
+    width: 70%;
+    height: 70%;
+  }
+  
+  .user>.modal {
+      
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .user>.modal>.modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      height: auto;
+    }
+    
+    /* The Close Button */
+    .user>.modal>.modal-content>.close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  
+    
+    .user>.modal>.modal-content>.close:hover,
+    .user>.modal>.modal-content>.close:focus {
+      color: #D1653E;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+    .user>.modal>.modal-content>.reviewTitl{
+      padding-left: 32%;
+    }
+    .user>.modal>.modal-content>.close{
+      padding-left: 98%;
+    }
