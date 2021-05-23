@@ -12,9 +12,6 @@
   .user__name {
     text-align: center;  
   }
-  .btn {
-    width: fill;
-  }
   .user__info {
     text-align: center;  
     padding:var(--spacing-3) 0 var(--spacing-1) 0;

@@ -3,7 +3,7 @@ import React from 'react'
 function Domaines({datas}) {    
     return (
       <div className="cursus">
-        <h2>Domaines professionels</h2>
+        <h3>Domaines professionels</h3>
         {datas.map(item => (
           <div className="grid__row" key={item.id}>
             <div className="grid__item">

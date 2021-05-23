@@ -14,7 +14,7 @@ const User = () => {
   const profileData = async () => {
     try {
       {/*const res = await axios.get("https://localhost:8080/bricoleur");*/}
-      const res = await axios.get("http://localhost:8080/bricoleur/2");
+      const res = await axios.get("http://localhost:8080/bricoleur/1");
       setProfileCell(res.data.phone);
       setProfileEmail(res.data.email);
       setProfileImage(res.data.photo);
