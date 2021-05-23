@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import SweetAlert from 'sweetalert2-react';
+import DropDownListCheckBoxLanguages from './DropDownListCheckBoxLanguages';
 
 const url='/login'
 class Form1 extends Component {
@@ -22,6 +23,11 @@ class Form1 extends Component {
         })
         //alert(this.state.lang)
     }
+    setLangue=(cat)=>{
+        //this.setState({ category: cat });
+        this.props.setLangue(cat);
+        
+    }   
 
     continue = e => {
         e.preventDefault();
@@ -31,8 +37,9 @@ class Form1 extends Component {
         const birthDate=document.getElementById("birthDate").value.length;
         const city=document.getElementById("city").value.length;
         const adresse=document.getElementById("adresse").value.length;
+        const langueSelected =document.getElementById("langueSelected").value.length;
 
-        if(firstName!==0 && lastName!==0 && showName!==0 && birthDate!==0 && city!==0 && this.state.lang.length!==0 && adresse!==0){
+        if(firstName!==0 && lastName!==0 && showName!==0 && birthDate!==0 && city!==0 && langueSelected!==0 && adresse!==0){
             this.props.nextStep();
         }
         else{
@@ -109,18 +116,7 @@ class Form1 extends Component {
                             </div>
                             
 
-                            <div className="form-outline mb-4">
-                                <label className="form-label" htmlFor="form5Example1">Langues<span style={{color:'red'}}>*</span></label>
-                                <br />
-                                <input  type="checkbox" onChange={this.add_supp} value="Arabe" />&nbsp;
-                                <label>Arabe &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-
-                                <input  type="checkbox" onChange={this.add_supp} value="Français" />&nbsp;
-                                <label>Français&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-
-                                <input  type="checkbox" onChange={this.add_supp} value="Englais" />&nbsp;
-                                <label>Englais</label>
-                            </div>
+                            <DropDownListCheckBoxLanguages inputChange={inputChange('langues')} setLangue={this.setLangue}  />
                             
 
                             <div className="form-outline mb-4 mt-5">

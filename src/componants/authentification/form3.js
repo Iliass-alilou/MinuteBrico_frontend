@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import SweetAlert from 'sweetalert2-react';
-
+import Swal from 'sweetalert2'
 //const url = "http://localhost:3000/profile_brico";
 const url = "/";
 
@@ -18,7 +18,7 @@ class Form3 extends Component {
 
     CreatBrico = e => {
         const { 
-            values: { email,password,phone,firstName,lastName,displayName,birthDate,city,adresse,photo,category,certifications} 
+            values: { email,password,phone,firstName,lastName,displayName,birthDate,city,adresse,photo,category,langues,certifications} 
         } = this.props;
 
         e.preventDefault();
@@ -52,13 +52,20 @@ class Form3 extends Component {
                 adresse:adresse,           
                 phone :phone,
                 category:category,
+                langues:langues,
                 certifications:certifications,
                 diplomes:diplomes
-            })
-            .then(res=>{
-                alert("merci de verifier votre boite pour confirmer votre compte");
-                document.location.href=url
-            })
+            }).then(Swal.fire({
+                title: 'Merci',                
+                text: 'Votre Profile Bricoleur a été bien Créé',
+                icon: 'success',
+                button: 'Ok'
+                
+              }).then( okay => {
+                if (okay){
+                  document.location.href=url
+                }
+            }))
 
         }
         else{

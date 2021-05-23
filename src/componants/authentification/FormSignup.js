@@ -18,7 +18,7 @@ class FormSignup extends Component {
         birthDate : '',
         adresse : '',
         city : '',
-
+        langues: [],
         category : [],
 
       certifications : [{
@@ -40,10 +40,7 @@ class FormSignup extends Component {
 
         }],
 
-        langues :[{
-            name_language : '',
-
-        }]
+        
     };
 
     nextStep = () => {
@@ -73,6 +70,11 @@ class FormSignup extends Component {
         this.setState({ category: cat });
         
     };
+   // setLangue
+   setLangue=(cat)=>{
+    this.setState({ langues: cat });
+    
+   };
   
     render() {
         const { step } = this.state;
@@ -95,7 +97,7 @@ class FormSignup extends Component {
                         nextStep={this.nextStep}
                         prevStep = {this.prevStep}
                         inputChange = {this.inputChange}
-
+                        setLangue={this.setLangue}
                         values= {values}
                             />
                     );

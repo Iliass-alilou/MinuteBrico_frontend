@@ -19,8 +19,9 @@ class FormSwitchBrico extends Component {
         birthDate : '',
         adresse : '',
         city : '',
-
+        descriptionProfil : '',
         category : [],
+        langues:[],
 
       certifications : [{
             name_certification : '',
@@ -41,10 +42,7 @@ class FormSwitchBrico extends Component {
 
         }],
 
-        langues :[{
-            name_language : '',
-
-        }]
+       
     };
 
     nextStep = () => {
@@ -74,13 +72,16 @@ class FormSwitchBrico extends Component {
         this.setState({ category: cat });
         
     };
-  
+    setLangue=(cat)=>{
+        this.setState({ langues: cat });
+        
+    };
    
 
     render() {
         const { step } = this.state;
-        const { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues} = this.state;
-        const values = { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues};
+        const { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues,descriptionProfil} = this.state;
+        const values = { photo, firstName, lastName,displayName, email, password, phone, birthDate,adresse,category,certifications,diplomes,langues,descriptionProfil};
         
         
 
@@ -91,7 +92,7 @@ class FormSwitchBrico extends Component {
                     nextStep={this.nextStep}
                     prevStep = {this.prevStep}
                     inputChange = {this.inputChange}
-
+                    setLangue={this.setLangue}
                     values= {values}
                     />
                 );
