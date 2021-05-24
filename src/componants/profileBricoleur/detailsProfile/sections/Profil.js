@@ -1,15 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
 
 function Profil() {
+    const [ProfilDescreption, setProfilDescreption] = useState("");
+    const profileData = async () => {
+        try {
+         
+          const res = await axios.get("http://localhost:8080/bricoleur/2");
+          setProfilDescreption(res.data.descriptionProfil);
+          
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    
+      useEffect(() => {
+        profileData();
+      }, []);
     return (
         <div className = "profil mb5">
-            <h3>Profil</h3>
-        <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae natus
-        nostrum tenetur, quidem perspiciatis excepturi porro sequi dolorem magni
-        sapiente molestiae nihil non ducimus earum blanditiis rerum quas
-        accusamus nemo! 
-      </p>
+            <h3>à propos de moi</h3>
+            <p>
+              {ProfilDescreption}
+            </p>
         </div>
     )
 }
