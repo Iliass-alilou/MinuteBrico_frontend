@@ -64,8 +64,29 @@ function Avis() {
     
     return (
         <div className = "profil mb5">
+<<<<<<< HEAD
             <h3>Avis</h3>
              {lesReviews(reviewsbrico)}
+=======
+            <h3><i class="fa fa-star" aria-hidden="true"></i>
+   Avis</h3>
+            <div>               
+                <h5>
+                    
+                </h5>
+                <p>
+                Avis 1
+                </p>
+            </div>
+
+
+            <p>
+                    Avis 2
+            </p>
+            <p>
+                    Avis 3
+            </p>
+>>>>>>> 8afa47e5af71b1ba744575df40cc8c1845a0a647
         </div>
     )
 }

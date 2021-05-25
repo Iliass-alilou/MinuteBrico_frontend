@@ -35,7 +35,7 @@ function Langues() {
     }
   return (
       <div className = "user">
-        <h3>Langues: </h3>  
+        <h2>Langues: </h2>  
         {
            <div>
              {leslangues(langue)}

@@ -141,7 +141,7 @@ const Review = () => {
                     <br/>
                     <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </form>
-                <button  style={{width:"36%",backgroundColor:"#D4643C"}} onClick={SendReview}  type="submit" className="btn  mr-4 mb-4">Enregistrer</button>
+                <button  style={{width:"36%",backgroundColor:"#D4643C",color:'white'}} onClick={SendReview}  type="submit" className="btn  mr-4 mb-4">Enregistrer</button>
             </div>  
         </div>
     )

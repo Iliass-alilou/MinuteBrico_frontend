@@ -1,6 +1,6 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
 
 *, ::before, ::after {
     box-sizing: border-box;
@@ -42,13 +42,14 @@
     --spacing-4: 1.5rem;
     --spacing-5: 2rem;
   }
-  
+
   body {
     font-family: var(--body-font);  
     font-weight: 200;
     background-color: var(--bg-color);
     color: var(--text-color);  
   }
+
   .dark {  
     background-color: var(--dark-body-bg-color);
     color: var(--dark-text-color);
@@ -231,4 +232,14 @@
   }
   .cv-print .grid__date {
     margin-top:5px;
+  }
+  .grid__container {
+    
+    font-family: 'Ubuntu', sans-serif;
+     background: linear-gradient(90deg, rgba(243,211,203,1) 0%, rgba(196,196,196,1) 100%);
+  }
+  .inter{
+    width: 100%;
+    height: 100%;
+    background-color: white;
   }
