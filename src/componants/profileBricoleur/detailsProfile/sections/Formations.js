@@ -9,7 +9,7 @@ function Formation({datas}) {
   const profileData = async () => {
     try {
       
-      const res = await axios.get("http://localhost:8080/bricoleur/2");
+      const res = await axios.get("http://localhost:8080/bricoleur/1");
       setDiplome(res.data.diplomes);
       
     } catch (error) {

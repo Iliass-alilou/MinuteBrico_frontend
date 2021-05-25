@@ -83,7 +83,7 @@ class Form3 extends Component {
 
     render() {
      
-
+        
         return (
             <div className="form-container mt-5 mb-5 " style={{width:"50%"}}>
                  <SweetAlert
@@ -133,6 +133,7 @@ class Form3 extends Component {
                                     id="descriptionProfil"                                
                                     type="textarea"
                                     name="descriptionProfil"
+                                    
                                     rows="4" cols="60" 
                                     placeholder="  Merci de donner Une Petite Description pour ton Profile :
                                                                                                         - vos points forts ?
