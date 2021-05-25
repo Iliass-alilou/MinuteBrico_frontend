@@ -3,18 +3,16 @@ import React, { Component } from 'react';
 export class Confirm extends Component {
 
     continue = e => {
-        e.preventDefault();
         this.props.nextStep();
     };
 
     back = e => {
-        e.preventDefault();
         this.props.prevStep();
     };
 
     render() {
         const { 
-            values: { title, description, category, address, zipcode, paymode, pricerange}
+            values: { title, description, category, address, zipcode, ville, date}
          } = this.props;
 
         return (
@@ -25,10 +23,11 @@ export class Confirm extends Component {
                 <ul class="list-group">
                     <li class="list-group-item">Titre: {title}</li>
                     <li class="list-group-item">Description: {description}</li>
-                    <li class="list-group-item">Catégories: {category}</li>
+                    <li class="list-group-item">Catégorie: {category}</li>
                     <li class="list-group-item">Addresse: {address}</li>
                     <li class="list-group-item">Zip Code: {zipcode}</li>
-                    <li class="list-group-item">Mode de paiment: {paymode}</li>
+                    <li class="list-group-item">Ville: {ville}</li>
+                    <li className="list-group-item">Date: {date}</li>
 
                 </ul>
                 <br/>

@@ -3,7 +3,8 @@ import React from 'react'
 function Domaines({datas}) {    
     return (
       <div className="cursus">
-        <h3>Domaines professionels</h3>
+        <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+ Domaines professionels</h3>
         {datas.map(item => (
           <div className="grid__row" key={item.id}>
             <div className="grid__item">

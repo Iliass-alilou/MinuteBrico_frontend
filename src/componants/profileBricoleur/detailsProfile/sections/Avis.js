@@ -33,7 +33,8 @@ function Avis() {
     
     return (
         <div className = "profil mb5">
-            <h3>Avis</h3>
+            <h3><i class="fa fa-star" aria-hidden="true"></i>
+   Avis</h3>
             <div>               
                 <h5>
                     

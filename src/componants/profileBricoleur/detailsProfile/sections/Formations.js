@@ -45,7 +45,8 @@ function Formation({datas}) {
   
     return (
         <div className="cursus mb3">
-          <h3>Formations</h3>
+          <h3> <i class="fa fa-university" aria-hidden="true"></i>
+  Formations</h3>
           {lesDiplomes(diplome)}
         </div>
     )

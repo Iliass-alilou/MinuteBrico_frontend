@@ -20,7 +20,8 @@ function Profil() {
       }, []);
     return (
         <div className = "profil mb5">
-            <h3>à propos de moi</h3>
+            <h3> <i class="fa fa-user-circle" aria-hidden="true"></i> 
+à propos de moi</h3>
             <p>
               {ProfilDescreption}
             </p>

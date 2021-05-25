@@ -32,6 +32,12 @@ a{
 .navbar>.center>a>li:hover{
     color: black;
 }
+.navbar>.center{
+    font-family: Arial;
+    font-size:20px;
+    color:#8C8C8C;
+    margin-right: 40px;
+}
 
 .navbar>.auth{
     list-style: none;
@@ -63,11 +69,9 @@ a{
     background: white;
     color: black;
     border: 1px solid transparent;
+    font-size:20px;
 }
 
-.InputComp{
-    
-}
 
 .InputComp>.title{
     font-family:Arial;
@@ -97,4 +101,20 @@ a{
     text-decoration: none;
     font-size:13px;
 
+}
+.menu-overr {
+    position: absolute;
+    top: 70%;
+    left: 90%;
+    background-color: rgb(209, 205, 205);
+    
+}
+.item-over{
+    color:black;
+    text-decoration: none;
+}
+ul{
+    text-decoration: none;
+    list-style-type: none;
+    text-align: left;
 }

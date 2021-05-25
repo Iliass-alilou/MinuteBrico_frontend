@@ -35,6 +35,9 @@ import Avis from './sections/Avis';
             <Avis/>
           </div>
         </div>
+        <div className="inter">
+
+        </div>
       </div>
     )
 }
