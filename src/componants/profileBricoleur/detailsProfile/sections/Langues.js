@@ -8,7 +8,7 @@ function Langues() {
   const profileData = async () => {
     try {
       
-      const res = await axios.get("http://localhost:8080/bricoleur/1");
+      const res = await axios.get("http://localhost:8080/bricoleur/3");
       setLangue(res.data.langues);
       
     } catch (error) {
