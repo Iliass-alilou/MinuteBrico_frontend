@@ -80,7 +80,7 @@ class Form2 extends Component {
 
                         <DropDownListCheckBox inputChange={inputChange('category')} setCategory={this.setCategorie}  />
 
-                        <h3 className="Certificat mb-3 mt-5 ml-4 mr-4" style={{color:"#D1653E",fontSize:"20px"}}>Certificat</h3>
+                        <h3 className="Certificat mb-3 mt-5 ml-4 mr-4" style={{color:"#D1653E",fontSize:"20px",backgroundColor:"white"}}>Certificat</h3>
 
                         <div className=" mb-4 md-5 mt-4" >
                             <label className="form-label" htmlFor="form5Example1">Nom du certificat<span style={{color:'red'}}>*</span> </label>
