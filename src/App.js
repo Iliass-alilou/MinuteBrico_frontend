@@ -14,6 +14,7 @@ import ContainerAuth from "./componants/authentification/containerAuth";
 import Review from "./componants/Reviews/review";
 import ProfileBricoleur from "./componants/profileBricoleur/ProfilBricoleur"
 import ProfileBricoleurDetails from "./componants/profileBricoleur/detailsProfile/ProfileBricoleurDetails"
+import ContainerEdit from "./componants/edit/containerEdit";
 
 //<AuthProvider> </AuthProvider>
 function App() {
@@ -35,6 +36,9 @@ function App() {
             <ContainerAuth />
           </Route>
 
+          <ProtectedRoute exact path="/parametres" >
+            <ContainerEdit />
+          </ProtectedRoute>
       
           {/*  kaoutar */}
 

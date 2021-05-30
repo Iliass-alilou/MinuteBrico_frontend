@@ -1,0 +1,57 @@
+/* /*.App{
+    width: 100vw;
+    height: 100vh;
+}
+.body{
+    margin:0;
+    padding:0;
+}*/
+/* 
+.Sidebar {
+    height: 200px;
+    width: 300px; 
+    background-color: #2F4050;
+    margin-left: 40px;
+    margin-top: 300px;
+    margin-right: 20px;
+    border:2px solid green;
+
+}
+.SidebarList {
+    height: auto;
+    padding: 0;
+    width: 100%;
+}
+
+.SidebarList.row{
+    height: 60px;
+    width: 100%;
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Sans','Lucida Grande', Arial, Sans-serif;
+
+}
+
+.SidebarList.row:hover {
+    cursor: pointer;
+    background-color: #293845;
+}
+.SidebarList #active{
+    background-color: #293846;
+}
+
+.row #icon{
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+
+.row #title {
+    flex: 70%;
+    cursor: pointer;
+} */ 

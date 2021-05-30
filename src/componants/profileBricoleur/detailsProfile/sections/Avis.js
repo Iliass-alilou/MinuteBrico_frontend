@@ -11,7 +11,7 @@ function Avis() {
   const profileData = async () => {
     try {
       
-      const res = await axios.get("http://localhost:8080/bricoleur/3");
+      const res = await axios.get("http://localhost:8080/bricoleur/1");
       setReviewsbrico(res.data.reviewsOnBrico);
       //alert(res.data.reviewsOnBrico[0].star);
       //setNmbrstar(4);  

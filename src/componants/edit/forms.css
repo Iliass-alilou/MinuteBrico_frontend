@@ -1,0 +1,57 @@
+.Container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+#FormEdit{
+    position:relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: left;
+    flex-direction: column;
+    height: 100vh;
+    width: 1800px;
+
+    background: rgba(246, 226, 216, 0.411764705882353);
+    
+    height: auto;
+  }
+
+
+  .form-container {
+    background: #fff;
+    border-radius: 0px;
+    max-width: 2000px;
+    margin-right: auto;
+    box-shadow: 0 15px 16px .17px rgba(0,0,0,0.05);
+    padding: 0. 7rem 2rem;
+  }
+
+ 
+
+  .form-container>.title{
+    padding-top: 5%;
+    font-size: large;
+    margin-top: auto;
+    font-size: 30px;
+    margin-top: -5px;
+    text-align: left;
+    font-weight: bold;
+    
+  }
+
+  .form-container>.Certificat{
+    color: #D1653E;
+    text-align: left;
+  }
+
+
+  h2 {
+    width: 100%; 
+    text-align: left; 
+    border-bottom: 1px solid rgb(163, 163, 163); 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 

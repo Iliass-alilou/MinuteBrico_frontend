@@ -8,7 +8,7 @@ function Profil() {
     const profileData = async () => {
         try {
          
-          const res = await axios.get("http://localhost:8080/bricoleur/3");
+          const res = await axios.get("http://localhost:8080/bricoleur/1");
           setProfilDescreption(res.data.descriptionProfil);
           setProfileName(
             `${res.data.firstName} ${res.data.lastName}`

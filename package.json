@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "js-cookie": "^2.2.1",
+    "moment": "^2.29.1",
     "multiselect-react-dropdown": "^1.6.11",
     "react": "^17.0.2",
     "react-cookie": "^4.0.3",

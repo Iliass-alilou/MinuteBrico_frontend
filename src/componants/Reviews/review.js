@@ -21,7 +21,7 @@ const Review = () => {
        
        
        if( comment!==0 ){
-         axios.get("http://localhost:8080/bricoleur/3")
+         axios.get("http://localhost:8080/bricoleur/1")
         
         .then(res=>{
             
@@ -37,7 +37,7 @@ const Review = () => {
               array3.push(revw)
               //console.log(array3)
               //alert(revwtab)
-            axios.put("http://localhost:8080/bricoleur/3" , {
+            axios.put("http://localhost:8080/bricoleur/1" , {
                
                 photo: res.data.photo,
                 firstName: res.data.firstName,
